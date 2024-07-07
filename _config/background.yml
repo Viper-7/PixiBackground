@@ -1,3 +1,6 @@
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
-    - App\Extension\PixiBackgroundSiteConfig
+    - Viper7\Extension\PixiBackgroundSiteConfig
+SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - Viper7\Extension\PixiPageExtension

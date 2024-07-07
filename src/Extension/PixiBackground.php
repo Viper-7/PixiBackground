@@ -1,5 +1,5 @@
 <?php
-namespace App\Extension;
+namespace Viper7\Extension;
 
 use SilverStripe\Core\Extension;
 use SilverStripe\Forms\FieldList;
