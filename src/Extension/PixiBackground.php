@@ -16,6 +16,7 @@ class PixiBackgroundSiteConfig extends Extension
         'DirtyRate' => 'Int',
         'CharacterSize' => 'Int',
         'CharacterSpeed' => 'Int',
+        'MaxDirtSize' => 'Int',
         'DisableBackground' => 'Boolean',
     ];
 
@@ -26,6 +27,7 @@ class PixiBackgroundSiteConfig extends Extension
     private static $defaults = [
         'InitialDirt' => 2000,
         'DirtyRate' => 20,
+        'MaxDirtSize' => 5,
         'CharacterSize' => 100,
         'CharacterSpeed' => 1,
         'DisableBackground' => false,
@@ -36,6 +38,7 @@ class PixiBackgroundSiteConfig extends Extension
         $fields->addFieldToTab('Root.Background', CheckboxField::create('DisableBackground', 'Disable Animated Background'));
         $fields->addFieldToTab('Root.Background', SliderField::create('InitialDirt', 'Initial Dirt', 0, 10000)->setRightTitle('The amount of dirt on the screen'));
         $fields->addFieldToTab('Root.Background', SliderField::create('DirtyRate', 'Dirty Rate', 0, 100)->setRightTitle('The rate at which the screen gets dirty'));
+        $fields->addFieldToTab('Root.Background', SliderField::create('MaxDirtSize', 'Max Dirt Size', 0, 100)->setRightTitle('The maximum size of the dirt'));
         $fields->addFieldToTab('Root.Background', SliderField::create('CharacterSize', 'Character Size', 10, 500)->setRightTitle('The size of the character in pixels'));
         $fields->addFieldToTab('Root.Background', SliderField::create('CharacterSpeed', 'Character Speed', 1, 10)->setRightTitle('The speed of the character'));
         $fields->addFieldToTab('Root.Background', $sprite = UploadField::create('Sprite', 'Sprite'));

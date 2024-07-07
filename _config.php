@@ -6,6 +6,7 @@ if(SiteConfig::current_site_config()->hasField('CharacterSpeed')) {
     $vars = [
         'InitialDirt' => SiteConfig::current_site_config()->InitialDirt,
         'DirtyRate' => SiteConfig::current_site_config()->DirtyRate,
+        'MaxDirtSize' => SiteConfig::current_site_config()->MaxDirtSize,
         'CharacterSize' => SiteConfig::current_site_config()->CharacterSize,
         'CharacterSpeed' => SiteConfig::current_site_config()->CharacterSpeed,
     ];
