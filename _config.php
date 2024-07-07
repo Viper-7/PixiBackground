@@ -10,7 +10,7 @@ $vars = [
     'CharacterSpeed' => SiteConfig::current_site_config()->CharacterSpeed,
 ];
 
-if(SiteConfig::current_site_config()->SpriteID) {
+if(in_array('SpriteID', array_keys(SiteConfig::current_site_config()))) {
     $vars['Sprite'] = SiteConfig::current_site_config()->Sprite()->getAbsoluteURL();
 } else {
     $vars['Sprite'] = null;
