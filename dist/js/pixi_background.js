@@ -57,6 +57,10 @@ app.ticker.add(() => {
         pressureWasher.x += $CharacterSpeed;
         if (pressureWasher.x > app.screen.width) {
             direction = 'left';
+            if($FlipDirections) {
+                pressureWasher.x += 100;
+                pressureWasher.scale.x = -1;
+            }
             row += $CharacterSize;
         }
     } else {
@@ -64,6 +68,7 @@ app.ticker.add(() => {
         if (pressureWasher.x < ($CharacterSize*-1)) {
             direction = 'right';
             row += $CharacterSize;
+            pressureWasher.scale.x = 1;
         }
     }
 
@@ -74,7 +79,7 @@ app.ticker.add(() => {
 
     // Clean dirt spots
     dirtSpots.forEach((dirt, index) => {
-        if(direction != 'right') offset = $CharacterSize;
+        if(!$FlipDirections && direction != 'right') offset = $CharacterSize;
         else offset = 0;
         if (Math.abs(offset + pressureWasher.x - dirt.x) < ($CharacterSize/2) && Math.abs(($CharacterSize/2) + pressureWasher.y - dirt.y) < ($CharacterSize/2)) {
             app.stage.removeChild(dirt);

@@ -7,6 +7,7 @@ if(SiteConfig::current_site_config()->hasField('CharacterSpeed')) {
         'InitialDirt' => SiteConfig::current_site_config()->InitialDirt,
         'DirtyRate' => SiteConfig::current_site_config()->DirtyRate,
         'MaxDirtSize' => SiteConfig::current_site_config()->MaxDirtSize,
+        'FlipDirections' => SiteConfig::current_site_config()->FlipDirections ? 'true' : 'false',
         'CharacterSize' => SiteConfig::current_site_config()->CharacterSize,
         'CharacterSpeed' => SiteConfig::current_site_config()->CharacterSpeed,
     ];
