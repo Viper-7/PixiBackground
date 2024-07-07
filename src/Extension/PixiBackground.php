@@ -43,7 +43,7 @@ class PixiBackgroundSiteConfig extends Extension
         $fields->addFieldToTab('Root.Background', SliderField::create('MaxDirtSize', 'Max Dirt Size', 0, 100)->setRightTitle('The maximum size of the dirt'));
         $fields->addFieldToTab('Root.Background', SliderField::create('CharacterSize', 'Character Size', 10, 500)->setRightTitle('The size of the character in pixels'));
         $fields->addFieldToTab('Root.Background', SliderField::create('CharacterSpeed', 'Character Speed', 1, 10)->setRightTitle('The speed of the character'));
-        $fields->addFieldToTab('Root.Background', CheckboxField::create('FlipDirections', 'Flip Directions')->setRightTitle('Flip the directions of the character on alternating lines'));
+        $fields->addFieldToTab('Root.Background', CheckboxField::create('FlipDirections', 'Flip the character on alternate lines'));
         $fields->addFieldToTab('Root.Background', $sprite = UploadField::create('Sprite', 'Sprite'));
         $sprite->getValidator()->setAllowedExtensions(['png', 'jpg', 'jpeg']);
     }

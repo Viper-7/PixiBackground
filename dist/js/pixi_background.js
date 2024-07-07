@@ -24,7 +24,7 @@ function createDirtSpot() {
     let g = Math.floor(Math.random() * 56 + 50);   // Green component between 50 and 105
     let b = Math.floor(Math.random() * 26);        // Blue component between 0 and 25
     let color = (r << 16) + (g << 8) + b;  // Convert to hex
-    let opacity = Math.random() * 0.5 + 0.5;  // Varying opacity
+    let opacity = Math.random() * 0.8 + 0.2;  // Varying opacity
     graphics.beginFill(color, opacity);
     graphics.drawCircle(0, 0, Math.random() * $MaxDirtSize);  // Smaller circles
     graphics.endFill();
