@@ -1,5 +1,6 @@
 <?php
 use SilverStripe\View\Requirements;
+use SilverStripe\SiteConfig\SiteConfig;
 
 
 $vars = [
