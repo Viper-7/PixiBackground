@@ -35,7 +35,7 @@ function createDirtSpot() {
 }
 
 function createPressureWasher() {
-    let texture = PIXI.Texture.from('/assets/Uploads/hydro.png');
+    let texture = PIXI.Texture.from($Sprite);
     let sprite = new PIXI.Sprite(texture);
     sprite.width = $CharacterSize;  // Adjust the size as needed
     sprite.height = $CharacterSize;  // Adjust the size as needed

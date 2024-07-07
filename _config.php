@@ -10,5 +10,13 @@ $vars = [
     'CharacterSpeed' => SiteConfig::current_site_config()->CharacterSpeed,
 ];
 
-Requirements::javascript('viper-7/pixibackground:dist/js/pixi.min.js');
-Requirements::javascriptTemplate('viper-7/pixibackground:dist/js/pixi_background.js', $vars);
+if(SiteConfig::current_site_config()->SpriteID) {
+    $vars['Sprite'] = SiteConfig::current_site_config()->Sprite()->getAbsoluteURL();
+} else {
+    $vars['Sprite'] = null;
+}
+
+if(!SiteConfig::current_site_config()->DisableBackground) {
+    Requirements::javascript('viper-7/pixibackground:dist/js/pixi.min.js');
+    Requirements::javascriptTemplate('viper-7/pixibackground:dist/js/pixi_background.js', $vars);
+}
