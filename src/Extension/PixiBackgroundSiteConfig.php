@@ -2,11 +2,8 @@
 namespace Viper7\Extension;
 
 use SilverStripe\Core\Extension;
-use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\CheckboxField;
 use TractorCow\SliderField\SliderField;
-use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class PixiBackgroundSiteConfig extends Extension
