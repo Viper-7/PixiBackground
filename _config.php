@@ -12,7 +12,7 @@ if(SiteConfig::current_site_config()->hasField('CharacterSpeed')) {
 }
 
 if(SiteConfig::current_site_config()->hasField('SpriteID')) {
-    $vars['Sprite'] = SiteConfig::current_site_config()->Sprite()->getAbsoluteURL();
+    $vars['Sprite'] = SiteConfig::current_site_config()->Sprite()->getURL();
 } else {
     $vars['Sprite'] = null;
 }
